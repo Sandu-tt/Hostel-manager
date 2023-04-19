@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="606.0" prefWidth="720.0"
+            style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19"
+            fx:controller="lk.ijse.controllers.ReservationDataController">
+    <AnchorPane layoutX="39.0" layoutY="18.0" prefHeight="579.0" prefWidth="641.0"
+                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="9.0" layoutX="98.0" layoutY="-2.0" stroke="WHITE"
+                   strokeType="INSIDE" width="144.0"/>
+        <Label layoutX="117.0" layoutY="-7.0" text="Reservation Data" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="38.0" text="Reservation ID">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtResiD" editable="false" layoutX="33.0" layoutY="59.0" prefHeight="26.0" prefWidth="115.0"/>
+        <Label layoutX="35.0" layoutY="113.0" text="Student">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="42.0" layoutY="216.0" text="Address">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtStAddress" editable="false" layoutX="39.0" layoutY="236.0" prefHeight="26.0"
+                   prefWidth="568.0"/>
+        <TextField fx:id="txtStName" editable="false" layoutX="39.0" layoutY="176.0" prefHeight="26.0"
+                   prefWidth="568.0"/>
+        <Separator layoutX="33.0" layoutY="100.0" prefHeight="2.0" prefWidth="568.0"/>
+        <Label layoutX="38.0" layoutY="148.0" text="Name">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="279.0" text="Contact">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtStContact" editable="false" layoutX="39.0" layoutY="298.0" prefHeight="26.0"
+                   prefWidth="241.0"/>
+        <Label layoutX="331.0" layoutY="279.0" text="Gender">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtStGender" editable="false" layoutX="331.0" layoutY="298.0" prefHeight="26.0"
+                   prefWidth="241.0"/>
+        <Label layoutX="38.0" layoutY="355.0" text="Room">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="387.0" text="Room ID">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtRoomID" editable="false" layoutX="38.0" layoutY="408.0" prefHeight="26.0"
+                   prefWidth="241.0"/>
+        <Label layoutX="332.0" layoutY="384.0" text="Room Type">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtRoomType" editable="false" layoutX="331.0" layoutY="405.0" prefHeight="26.0"
+                   prefWidth="241.0"/>
+        <Separator layoutX="39.0" layoutY="336.0" prefHeight="2.0" prefWidth="568.0"/>
+        <Label layoutX="39.0" layoutY="453.0" text="Payments">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="36.0" layoutY="444.0" prefHeight="2.0" prefWidth="568.0"/>
+        <Label layoutX="39.0" layoutY="479.0" text="Keymoney">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtKeyMoney" editable="false" layoutX="38.0" layoutY="502.0" prefHeight="26.0"
+                   prefWidth="179.0"/>
+        <Label layoutX="241.0" layoutY="478.0" text="Paid">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtPaid" editable="false" layoutX="239.0" layoutY="501.0" prefHeight="26.0"
+                   prefWidth="179.0"/>
+        <TextField fx:id="txtToPaid" editable="false" layoutX="441.0" layoutY="500.0" prefHeight="26.0"
+                   prefWidth="179.0"/>
+        <Label layoutX="439.0" layoutY="479.0" text="To Paid">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtStatus" editable="false" layoutX="484.0" layoutY="58.0" prefHeight="26.0"
+                   prefWidth="115.0"/>
+        <Label layoutX="484.0" layoutY="38.0" text="Status">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="991.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controllers.UnPaidFormController">
+    <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="555.0" prefWidth="950.0" style="-fx-background-radius: 50; -fx-border-radius: 20; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="82.0" layoutY="-3.0" stroke="WHITE" strokeType="INSIDE" width="197.0" />
+        <Label layoutX="99.0" layoutY="-6.0" text="Un Paid Students" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCart" layoutX="15.0" layoutY="22.0" prefHeight="519.0" prefWidth="918.0">
+            <columns>
+                <TableColumn fx:id="colStID" prefWidth="117.0" text="Student ID" />
+                <TableColumn fx:id="colStName" prefWidth="376.0" text="Student Name" />
+                <TableColumn fx:id="colResID" prefWidth="226.0" text="Reservation ID" />
+                <TableColumn fx:id="colBalance" prefWidth="198.0" text="To Paid" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+</AnchorPane>

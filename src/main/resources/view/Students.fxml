@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="991.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controllers.StudentFormController">
+    <AnchorPane layoutX="20.0" layoutY="33.0" prefHeight="510.0" prefWidth="327.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="98.0" layoutY="-3.0" stroke="WHITE" strokeType="INSIDE" width="108.0" />
+        <Label layoutX="105.0" layoutY="-6.0" text="New Student" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="48.0" layoutY="36.0" text="Student ID">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtID" layoutX="48.0" layoutY="54.0" onKeyReleased="#stIDPressed" prefHeight="26.0" prefWidth="230.0" />
+        <Label layoutX="48.0" layoutY="96.0" text="Name">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtName" layoutX="48.0" layoutY="114.0" onKeyReleased="#stNamePressed" prefHeight="26.0" prefWidth="230.0" />
+        <Label layoutX="48.0" layoutY="163.0" text="Gender">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="48.0" layoutY="226.0" text="DOB">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="48.0" layoutY="296.0" text="Address">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtAddress" layoutX="48.0" layoutY="314.0" onKeyReleased="#stAddressPressed" prefHeight="26.0" prefWidth="230.0" />
+        <Label layoutX="48.0" layoutY="365.0" text="Contact No">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtContactNO" layoutX="48.0" layoutY="383.0" onKeyReleased="#stContactPressed" prefHeight="26.0" prefWidth="230.0" />
+        <DatePicker fx:id="dobPicker" layoutX="48.0" layoutY="246.0" onAction="#setDOB" prefHeight="26.0" prefWidth="230.0" />
+        <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="34.0" layoutY="437.0" onAction="#saveOnAction" prefHeight="34.0" prefWidth="58.0" style="-fx-background-radius: 35; -fx-border-color: #16a085; -fx-border-radius: 35; -fx-border-width: 3;" text="Add" textFill="#16a085">
+            <font>
+                <Font name="Consolas Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnUpdate" layoutX="128.0" layoutY="437.0" onAction="#updateOnAction" style="-fx-background-radius: 35; -fx-border-color: #f1c40f; -fx-border-radius: 35; -fx-border-width: 3;" text="Update" textFill="#f1c40f">
+            <font>
+                <Font name="Consolas Bold" size="14.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnDelete" layoutX="229.0" layoutY="437.0" onAction="#deleteOnAction" style="-fx-background-radius: 35; -fx-border-radius: 35; -fx-border-color: #d35400; -fx-border-width: 3;" text="Delete" textFill="#d35400">
+            <font>
+                <Font name="Consolas Bold" size="14.0" />
+            </font>
+        </JFXButton>
+        <ComboBox fx:id="cmbGender" layoutX="49.0" layoutY="189.0" onAction="#setGender" prefHeight="26.0" prefWidth="230.0" promptText="Gender" />
+    </AnchorPane>
+    <AnchorPane layoutX="395.0" layoutY="33.0" prefHeight="510.0" prefWidth="578.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="82.0" layoutY="-3.0" stroke="WHITE" strokeType="INSIDE" width="150.0" />
+        <Label layoutX="92.0" layoutY="-6.0" text="Student Details" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblStudent" layoutX="14.0" layoutY="28.0" prefHeight="456.0" prefWidth="549.0">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="64.79998779296875" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="130.4000244140625" text="Name" />
+                <TableColumn fx:id="colGender" prefWidth="67.20001220703125" text="Gender" />
+                <TableColumn fx:id="colDOB" prefWidth="91.199951171875" text="DOB" />
+                <TableColumn fx:id="colAddress" prefWidth="102.39990234375" text="Address" />
+                <TableColumn fx:id="colContactNO" prefWidth="96.0" text="Contact NO" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+</AnchorPane>

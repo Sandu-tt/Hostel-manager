@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="AnchorPaneContext" prefHeight="650.0"
+            prefWidth="1000.0"
+            style="-fx-background-color: #ffffff; -fx-border-color: #d86c27; -fx-border-width: 2;"
+            xmlns="http://javafx.com/javafx/19"
+            fx:controller="lk.ijse.controllers.DashboardController">
+    <Label fx:id="lblHome" layoutX="273.0" layoutY="19.0" onMouseClicked="#homeOnAction" text="Home">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Label fx:id="lblRooms" layoutX="336.0" layoutY="19.0" onMouseClicked="#roomsOnAction" text="Rooms">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Label fx:id="lblStudents" layoutX="405.0" layoutY="19.0" onMouseClicked="#studentsOnAction" text="Students">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Label fx:id="lblReservation" layoutX="496.0" layoutY="19.0" onMouseClicked="#reservationOnAction"
+           text="Reservation">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Line fx:id="lineHome" endX="26.199996948242188" layoutX="272.0" layoutY="39.0" startX="2.1999969482421875"
+          stroke="#d86c27" strokeWidth="3.0"/>
+    <Line fx:id="lineRooms" endX="33.79998779296875" layoutX="335.0" layoutY="39.0" startX="2.1999969482421875"
+          stroke="#d86c27" strokeWidth="3.0"/>
+    <Line fx:id="lineStudents" endX="58.60003662109375" layoutX="404.0" layoutY="39.0" startX="2.1999969482421875"
+          stroke="#d86c27" strokeWidth="3.0"/>
+    <Line fx:id="lineReservation" endX="83.4000244140625" layoutX="495.0" layoutY="39.0" startX="2.1999969482421875"
+          stroke="#d86c27" strokeWidth="3.0"/>
+    <Label layoutX="46.0" layoutY="8.0" text="D24" textFill="#d86c27">
+        <font>
+            <Font name="Consolas Bold" size="51.0"/>
+        </font>
+    </Label>
+    <AnchorPane fx:id="secondaryPain" layoutX="3.0" layoutY="67.0" prefHeight="576.0" prefWidth="991.0"
+                style="-fx-background-color: #ffffff;">
+        <Label layoutX="56.0" layoutY="401.0" text="or follow the locals.">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="117.0" text="Rest">
+            <font>
+                <Font name="Consolas Bold" size="51.0"/>
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="175.0" text="Study">
+            <font>
+                <Font name="Consolas Bold" size="51.0"/>
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="357.0" text="Explore the best of Municipality of Loppersum! Whether">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="378.0" text="you want to experience the city like a tourist">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="553.0" fitWidth="463.0" layoutX="521.0" layoutY="57.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@assets/studying.png"/>
+        </ImageView>
+        <Label layoutX="56.0" layoutY="237.0" text="Enjoy the Day">
+            <font>
+                <Font name="Consolas Bold" size="51.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+    <Label fx:id="lblHistory" layoutX="605.0" layoutY="18.0" onMouseClicked="#historyOnAction" text="History">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Line fx:id="lineHistory" endX="40.0" layoutX="604.0" layoutY="38.0" startX="2.1999969482421875" stroke="#d86c27"
+          strokeWidth="3.0"/>
+    <Label fx:id="lblUnPaid" layoutX="682.0" layoutY="18.0" onMouseClicked="#unPaidSts" text="Un Paid">
+        <font>
+            <Font name="Consolas Bold" size="15.0"/>
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+    <Line fx:id="lineUnpaid" endX="40.0" layoutX="681.0" layoutY="38.0" startX="2.1999969482421875" stroke="#d86c27"
+          strokeWidth="3.0"/>
+    <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="813.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@assets/lines.png"/>
+    </ImageView>
+    <JFXButton buttonType="RAISED" layoutX="808.0" layoutY="13.0" onAction="#settingsOnAction" opacity="0.0"
+               prefHeight="18.0" prefWidth="27.0" text=" ">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </JFXButton>
+    <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="847.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@assets/account.png"/>
+    </ImageView>
+    <JFXButton buttonType="RAISED" layoutX="846.0" layoutY="13.0" opacity="0.0" prefHeight="18.0" prefWidth="27.0"
+               text=" ">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </JFXButton>
+    <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="970.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@assets/close.png"/>
+    </ImageView>
+    <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="965.0" layoutY="4.0" onAction="#closeOnAction"
+               opacity="0.0" prefHeight="18.0" prefWidth="27.0" text=" ">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </JFXButton>
+    <Label fx:id="lblUserName" layoutX="881.0" layoutY="17.0" prefHeight="18.0" prefWidth="75.0" text="Nermo">
+        <font>
+            <Font name="Consolas Bold" size="14.0"/>
+        </font>
+    </Label>
+</AnchorPane>

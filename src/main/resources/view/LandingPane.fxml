@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controllers.LandingPaneController">
+    <AnchorPane fx:id="secondaryPain" layoutX="7.0" prefHeight="576.0" prefWidth="991.0" style="-fx-background-color: #ffffff;">
+        <Label layoutX="56.0" layoutY="401.0" text="or follow the locals.">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="117.0" text="Rest">
+            <font>
+                <Font name="Consolas Bold" size="51.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="175.0" text="Study">
+            <font>
+                <Font name="Consolas Bold" size="51.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="357.0" text="Explore the best of Municipality of Loppersum! Whether">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="378.0" text="you want to experience the city like a tourist">
+            <font>
+                <Font name="Consolas Bold" size="15.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="studyingImageHolder" fitHeight="553.0" fitWidth="463.0" layoutX="521.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@assets/studying.png" />
+        </ImageView>
+        <Label layoutX="56.0" layoutY="237.0" text="Enjoy the Day">
+            <font>
+                <Font name="Consolas Bold" size="51.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+</AnchorPane>

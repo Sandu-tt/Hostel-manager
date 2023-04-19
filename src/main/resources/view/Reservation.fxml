@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="991.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controllers.ReservationFormController">
+    <AnchorPane layoutX="20.0" layoutY="24.0" prefHeight="225.0" prefWidth="950.0" style="-fx-background-radius: 50; -fx-border-radius: 20; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="59.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" width="81.0" />
+        <Label layoutX="68.0" layoutY="-7.0" prefHeight="18.0" prefWidth="62.0" text="Reserve" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtReservation" editable="false" layoutX="44.0" layoutY="53.0" prefHeight="26.0" prefWidth="150.0" />
+        <Label layoutX="45.0" layoutY="25.0" text="Reservation No:" />
+        <Label layoutX="233.0" layoutY="27.0" text="Student ID" />
+        <ComboBox fx:id="cbxStudentID" layoutX="216.0" layoutY="54.0" prefWidth="150.0" />
+        <TextField fx:id="txtStName" editable="false" layoutX="392.0" layoutY="54.0" prefHeight="26.0" prefWidth="160.0" />
+        <Label layoutX="392.0" layoutY="27.0" text="Student Name" />
+        <Label layoutX="43.0" layoutY="91.0" text="Room Type ID" />
+        <ComboBox fx:id="cbxRoomID" layoutX="43.0" layoutY="113.0" prefWidth="150.0" />
+        <TextField fx:id="txtRoomType" editable="false" layoutX="219.0" layoutY="114.0" />
+        <Label layoutX="220.0" layoutY="91.0" text="Type" />
+        <TextField fx:id="txtRoomAvailability" editable="false" layoutX="392.0" layoutY="113.0" />
+        <Label layoutX="393.0" layoutY="90.0" text="Availability" />
+        <TextField fx:id="txtKeyMoney" editable="false" layoutX="567.0" layoutY="113.0" />
+        <Label layoutX="568.0" layoutY="90.0" text="Key Money(LKR)" />
+        <TextField fx:id="txtPayingAmount" layoutX="567.0" layoutY="171.0" onKeyReleased="#payAmountPressed" />
+        <Label layoutX="568.0" layoutY="148.0" text="Paying Amount" />
+        <DatePicker fx:id="pickerFrom" layoutX="45.0" layoutY="172.0" promptText="From" />
+        <DatePicker fx:id="pickerTo" layoutX="276.0" layoutY="172.0" onAction="#pickedToDate" promptText="To" />
+        <Label layoutX="244.0" layoutY="165.0" prefHeight="18.0" prefWidth="12.0" text=":">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <Label layoutX="43.0" layoutY="147.0" text="Date Period" />
+        <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="786.0" layoutY="95.0" onAction="#addToCartOnAction" prefHeight="39.0" prefWidth="110.0" style="-fx-border-radius: 35; -fx-background-radius: 35; -fx-border-color: #d86c27; -fx-border-width: 4;" text="Review" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </JFXButton>
+        <Separator layoutX="502.0" layoutY="158.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="0.0" />
+        <TextField fx:id="txtAddress" editable="false" layoutX="569.0" layoutY="50.0" prefHeight="26.0" prefWidth="160.0" />
+        <Label layoutX="569.0" layoutY="23.0" text="Student Address" />
+    </AnchorPane>
+    <AnchorPane layoutX="20.0" layoutY="308.0" prefHeight="143.0" prefWidth="950.0" style="-fx-background-radius: 50; -fx-border-radius: 20; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="82.0" layoutY="-3.0" stroke="WHITE" strokeType="INSIDE" width="134.0" />
+        <Label layoutX="99.0" layoutY="-6.0" text="Review Details" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCart" layoutX="16.0" layoutY="26.0" prefHeight="100.0" prefWidth="918.0">
+            <columns>
+                <TableColumn fx:id="colStID" prefWidth="117.0" text="Student ID" />
+                <TableColumn fx:id="colRoomTypeID" prefWidth="127.0" text="Room Type ID" />
+                <TableColumn fx:id="colKeyMoney" prefWidth="129.0" text="Key Money" />
+                <TableColumn fx:id="colPayingAmount" prefWidth="137.5" text="Paying Amount" />
+                <TableColumn fx:id="colDateFrom" prefWidth="165.5" text="Date From" />
+                <TableColumn fx:id="colDateTo" prefWidth="153.5" text="Date To" />
+                <TableColumn fx:id="actions" prefWidth="87.5" text="Actions" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+     <JFXButton fx:id="btnPlace" buttonType="RAISED" layoutX="866.0" layoutY="514.0" onAction="#placeOrderOnAction" prefHeight="39.0" prefWidth="98.0" style="-fx-border-radius: 35; -fx-background-radius: 35; -fx-border-color: #d86c27; -fx-border-width: 4;" text="Confirm" textFill="#d86c27">
+         <font>
+             <Font name="Consolas Bold" size="16.0" />
+         </font>
+     </JFXButton>
+</AnchorPane>

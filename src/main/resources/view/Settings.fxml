@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="512.0" prefWidth="590.0"
+            style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19"
+            fx:controller="lk.ijse.controllers.SettingsFormController">
+    <AnchorPane layoutX="97.0" layoutY="18.0" prefHeight="464.0" prefWidth="424.0"
+                style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="98.0" layoutY="-3.0"
+                   stroke="WHITE" strokeType="INSIDE" width="108.0"/>
+        <Label layoutX="117.0" layoutY="-7.0" text="Settings" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="175.0" layoutY="49.0" text="Usename">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtUsername" layoutX="56.0" layoutY="96.0" prefHeight="26.0" prefWidth="312.0"/>
+        <Label layoutX="168.0" layoutY="149.0" text="New Pasword">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="156.0" layoutY="250.0" text="Current Password">
+            <font>
+                <Font name="Consolas Bold" size="15.0"/>
+            </font>
+        </Label>
+        <JFXButton buttonType="RAISED" layoutX="194.0" layoutY="358.0" onAction="#saveOnAction" prefHeight="34.0"
+                   prefWidth="58.0"
+                   style="-fx-background-radius: 35; -fx-border-color: #16a085; -fx-border-radius: 35; -fx-border-width: 3;"
+                   text="Save" textFill="#16a085">
+            <font>
+                <Font name="Consolas Bold" size="14.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </JFXButton>
+        <PasswordField fx:id="txtCurrentPass" layoutX="63.0" layoutY="299.0" prefHeight="26.0" prefWidth="310.0"/>
+        <PasswordField fx:id="txtNewPass" layoutX="57.0" layoutY="181.0" prefHeight="26.0" prefWidth="310.0"/>
+        <JFXToggleButton fx:id="toggleNewPass" layoutX="266.0" layoutY="213.0" onAction="#toggleNew" prefHeight="18.0"
+                         prefWidth="103.0" size="6.0" text="Show"/>
+        <JFXToggleButton fx:id="toggleCurrentPass" layoutX="269.0" layoutY="327.0" onAction="#toggleCurrent"
+                         prefHeight="18.0" prefWidth="103.0" size="6.0" text="Show"/>
+    </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="991.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controllers.HistoryFormController">
+    <AnchorPane layoutX="21.0" layoutY="451.0" prefHeight="101.0" prefWidth="950.0" style="-fx-background-radius: 50; -fx-border-radius: 20; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="59.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" width="81.0" />
+        <Label layoutX="68.0" layoutY="-7.0" prefHeight="18.0" prefWidth="62.0" text="Reserve" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtReservation" editable="false" layoutX="16.0" layoutY="53.0" prefHeight="26.0" prefWidth="110.0" />
+        <Label layoutX="17.0" layoutY="25.0" text="Reservation No:" />
+        <Label layoutX="141.0" layoutY="27.0" text="Student ID" />
+        <TextField fx:id="txtStID" editable="false" layoutX="141.0" layoutY="53.0" prefHeight="26.0" prefWidth="129.0" />
+        <Label layoutX="284.0" layoutY="26.0" text="Room ID" />
+        <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="826.0" layoutY="42.0" onAction="#updateOnAction" style="-fx-border-radius: 35; -fx-background-radius: 35; -fx-border-color: #d86c27; -fx-border-width: 4;" text="Update" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </JFXButton>
+        <TextField fx:id="txtRoomID" editable="false" layoutX="284.0" layoutY="53.0" prefHeight="26.0" prefWidth="139.0" />
+        <Label layoutX="438.0" layoutY="25.0" text="Paid" />
+        <TextField fx:id="txtPaid" editable="false" layoutX="438.0" layoutY="53.0" prefHeight="26.0" prefWidth="110.0" />
+        <TextField fx:id="txtToPaid" editable="false" layoutX="561.0" layoutY="53.0" prefHeight="26.0" prefWidth="101.0" />
+        <Label layoutX="561.0" layoutY="25.0" text="To Paid" />
+      <Label layoutX="675.0" layoutY="26.0" text="Pay Now" />
+      <TextField fx:id="txtPayNow" layoutX="675.0" layoutY="53.0" prefHeight="26.0" prefWidth="101.0" />
+    </AnchorPane>
+    <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="424.0" prefWidth="950.0" style="-fx-background-radius: 50; -fx-border-radius: 20; -fx-border-color: #d86c27; -fx-border-width: 4;">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="10.0" layoutX="82.0" layoutY="-3.0" stroke="WHITE" strokeType="INSIDE" width="197.0" />
+        <Label layoutX="99.0" layoutY="-6.0" text="Reservation Details" textFill="#d86c27">
+            <font>
+                <Font name="Consolas Bold" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCart" layoutX="15.0" layoutY="22.0" prefHeight="388.0" prefWidth="918.0">
+            <columns>
+            <TableColumn fx:id="colResID" prefWidth="83.23233032226562" text="Res ID" />
+                <TableColumn fx:id="colStID" prefWidth="87.7879409790039" text="Student ID" />
+                <TableColumn fx:id="colRoomTypeID" prefWidth="115.07589721679688" text="Room Type ID" />
+                <TableColumn fx:id="colKeyMoney" prefWidth="110.48501586914062" text="Key Money" />
+                <TableColumn fx:id="colPayingAmount" prefWidth="119.63150024414062" text="Paid Amount" />
+                <TableColumn fx:id="colDateFrom" prefWidth="127.18707275390625" text="Date From" />
+                <TableColumn fx:id="colDateTo" prefWidth="106.368896484375" text="Date To" />
+            <TableColumn fx:id="colStatus" prefWidth="84.58587646484375" text="Status" />
+            <TableColumn fx:id="colAction" prefWidth="84.91412353515625" text="Action" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+</AnchorPane>
